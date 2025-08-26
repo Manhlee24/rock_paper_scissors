@@ -13,19 +13,25 @@ while True:
     if player_choice not in choices:
         print("Invalid choice. Please choose 'rock', 'paper', or 'scissors'. ")
         continue
-    computer_choice= random.choice(choices)
+    if player_choice=="rock":
+        computer_choice="paper"
+    elif player_choice=="paper":
+        computer_choice="scissors"
+    elif player_choice=="scissors":
+        computer_choice="rock"
+
     print(f"\nYour choose: {player_choice}")
     print(f"Computer's choice: {computer_choice}\n ")
 
-    #Determined the winner
-    if player_choice==computer_choice:
-        print("It's a tie! You both chose the same")
-    elif (player_choice=="rock" and computer_choice=="scissors") or \
-         (player_choice == "paper" and computer_choice == "rock") or \
-         (player_choice == "scissors" and computer_choice == "paper"):
-        print("You won!! Congratulation!!")
-    else:
-        print("You lose!!Computer won ")
+    # #Determined the winner
+    # if player_choice==computer_choice:
+    #     print("It's a tie! You both chose the same")
+    # elif (player_choice=="rock" and computer_choice=="scissors") or \
+    #      (player_choice == "paper" and computer_choice == "rock") or \
+    #      (player_choice == "scissors" and computer_choice == "paper"):
+    #     print("You won!! Congratulation!!")
+    # else:
+    print("You lose!!Computer won ")
 
 
 
